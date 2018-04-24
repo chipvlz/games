@@ -1,0 +1,129 @@
+body{
+	-webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    cursor: default;
+    margin: 0;
+    background-color: #2c2f43;
+	zoom: 60%;
+}
+p,h1{
+	margin:0;
+}
+#cn-chess{
+	margin: 10px auto;
+	width: 1200px;
+}
+@media (max-width: 1200px) { 
+  #cn-chess{ 
+    width: 900px; 
+  } 
+}
+h1{
+	font-size: 40px;
+}
+/*信息*/
+#control,#information,#report{
+	background-color: #ddd;
+	float: left;
+	width:300px;
+	height:333.33px;
+	text-align: center;
+}
+	/*上*/
+	#name{
+		font-family: "隶书","楷体","楷体_GB2312";
+		font-size: 50px;
+	}
+	#player{
+		font-family: "隶书","楷体","楷体_GB2312";
+		font-size: 66px;
+		line-height: 150px;
+		text-align: center;
+		margin: 40px auto;
+		background-color: #dc3;
+		width:150px;
+		height:150px;
+		background-repeat: no-repeat;
+		-webkit-background-size: 100px 100px;
+		background-size: 100px 100px;
+		background-position: center center;
+	}
+	/*中*/
+	#tip{
+		font-size: 40px;
+	}
+	#start,#retract{
+		float: left;
+		width: calc(50% - 6px);
+		cursor: pointer;
+		border: groove 3px;
+		font-size: 30px;
+	}
+	/*下*/
+	#report{
+		font-size: 40px;
+	}
+/*棋盘*/
+#board{
+	
+	background-color: #dc3;
+	background-image: 
+		/*横纵线*/
+		repeating-linear-gradient(#000 0px, #000 4px, transparent 4px, transparent 100px), 
+		repeating-linear-gradient(90deg,#000 0px, #000 4px, transparent 4px, transparent 100px),
+		repeating-linear-gradient(90deg,#000 0px, #000 4px, transparent 4px, transparent 100px),
+		linear-gradient(90deg,#000 4px, transparent 4px, transparent 800px,#000 800px),
+		/*九宫斜线*/
+		linear-gradient(45deg,transparent 49.5%,#000 49.5%, #000 50.5%, transparent 50.5%),
+		linear-gradient(-45deg,transparent 49.5%,#000 49.5%, #000 50.5%, transparent 50.5%),
+		linear-gradient(45deg,transparent 49.5%,#000 49.5%, #000 50.5%, transparent 50.5%),
+		linear-gradient(-45deg,transparent 49.5%,#000 49.5%, #000 50.5%, transparent 50.5%);
+	background-size: 804px 904px,804px 404px,804px 404px,804px 904px,204px 204px,204px 204px,204px 204px,204px 204px;
+	background-repeat: no-repeat;
+	background-position: left 48px top 48px, left 48px top 48px, left 48px bottom 48px, left 48px top 48px, left 348px top 48px,left 348px top 48px,left 348px bottom 48px,left 348px bottom 48px;
+	width:900px;
+	height:1000px;
+	float: left;
+}
+#board>div{
+	font-family: "隶书","楷体","楷体_GB2312";
+	font-size: 66px;
+	line-height: 100px;
+	text-align: center;
+	width:11.1111111%;
+	height:10%;
+	float: left;
+}
+/*#sq21,#sq71,#sq27,#sq77{
+	background: radial-gradient(#000 15%, transparent 0);
+}
+#sq30,#sq32,#sq34,#sq36,#sq38,#sq60,#sq62,#sq64,#sq66,#sq68{
+	background: radial-gradient(#000 12%, transparent 0);
+}*/
+/*事件*/
+	/*信息*/
+		/*上*/
+		/*中*/
+		#cn-chess .cantclick{
+			color: #fff;
+			cursor: default;
+		}
+	/*棋子*/
+	.blackpiece{
+		background-image:radial-gradient(#ed8 57%,#db4 60%,#da0 65%, transparent 69%);
+		color: #000;
+	}
+	.redpiece{
+		background-image:radial-gradient(#ec8 57%,#da4 60%,#d90 65%, transparent 69%);
+		color: #f00;
+	}
+	.thispiece{
+		outline: #00f dashed 6px;
+		outline-offset: -3px;
+	}
+	.lastpiece{
+		outline: #cec dashed 6px;
+		outline-offset: -3px;
+	}

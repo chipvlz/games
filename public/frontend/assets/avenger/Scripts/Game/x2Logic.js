@@ -1,0 +1,51 @@
+(function(scope,$){window.DoubleLogic={};var mermaidPos=[{x:125,y:475,prizex:200,prizey:550,effx:52,effy:290},{x:225,y:475,prizex:375,prizey:550,effx:220,effy:280},{x:475,y:450,prizex:550,prizey:550,effx:400,effy:220},{x:625,y:475,prizex:725,prizey:550,effx:565,effy:235}];var intevalWinX2;var doubleLogic=function(x2Info){initDoubleGame(x2Info);renderDoubleGame();GameAudio.Play('Sound.DoubleGame');if(x2Info.CurrentStep>0&&x2Info.CurrentStep<3){$('#continuesX2Avenger').show();$('#stopX2Avenger').show();App.CD2AccInfo.X2Game=x2Info;Config.X2CurrentStep=x2Info.CurrentStep;var curLastPrize=CommonUtility.parseIntMoney($('#totalMoneyWinX2Avenger').text());var countUpLastPrize=new CDCountUp(null,curLastPrize,x2Info.PrizeValue>0?x2Info.PrizeValue:x2Info.StartBetValue,0,1,options,function(value){$('#totalMoneyWinX2Avenger').text(CommonUtility.formatMoney(value));});countUpLastPrize.start();}}
+doubleLogic.prototype.NextX2Game=function(){GameAudio.Play('Sound.X2.Next');renderDoubleGame();$('#continuesX2Avenger').hide();var countUpX2PrizeValue=new CDCountUp(null,curLastPrize*1.99,x2Info.PrizeValue>0?x2Info.PrizeValue*1.99:x2Info.StartBetValue*1.99,0,1,options,function(value){$('#totalX2AvengerWon').text(CommonUtility.formatMoney(value));});countUpX2PrizeValue.start();$('#stopX2Avenger').show();$('#continuesX2Avenger').show();Config.IsInDouble=true;$('.text_sai').attr("style","position: absolute; margin-top: 54px;");}
+doubleLogic.prototype.ResultPlayX2=function(x2Info){$('#continuesX2Avenger').hide();$('#stopX2Avenger').hide();App.CD2AccInfo.X2Game=x2Info;Config.X2CurrentStep=x2Info.CurrentStep;if(x2Info.IsStop){renderResultX2(x2Info.ItemID,x2Info.IsStop,function(){Config.IsInDouble=false;var curLastPrize=CommonUtility.parseIntMoney($('#totalMoneyWinX2Avenger').text());var countUpLastPrize=new CDCountUp(null,curLastPrize,x2Info.PrizeValue,0,1,options,function(value){$('#totalMoneyWinX2Avenger').text(CommonUtility.formatMoney(value));});countUpLastPrize.start();var countUpX2PrizeValue=new CDCountUp(null,curLastPrize*1.99,x2Info.PrizeValue*1.99,0,1,options,function(value){$('#totalX2AvengerWon').text(CommonUtility.formatMoney(value));});countUpX2PrizeValue.start();$('#continuesX2Avenger').hide();$('#stopX2Avenger').hide();if(timeoutDouble){clearTimeout(timeoutDouble);}
+timeoutDouble=setTimeout(function(){GuiContents.StopX2Game();},2000);});}else{renderResultX2(x2Info.ItemID,x2Info.IsStop,function(){var curLastPrize=CommonUtility.parseIntMoney($('#totalMoneyWinX2Avenger').text());var countUpLastPrize=new CDCountUp(null,curLastPrize,x2Info.PrizeValue>0?x2Info.PrizeValue:x2Info.StartBetValue,0,1,options,function(value){$('#totalMoneyWinX2Avenger').text(CommonUtility.formatMoney(value));});countUpLastPrize.start();var totalPrizeValue=x2Info.PrizeValue>0?x2Info.PrizeValue:x2Info.StartBetValue;$("#moneyWinX2Avenger").html("+"+CommonUtility.formatMoney(totalPrizeValue));if(x2Info.CurrentStep===3){resultX2WinMessage(totalPrizeValue,GuiContents.StopX2Game);}else{var countUpX2PrizeValue=new CDCountUp(null,curLastPrize*1.99,x2Info.PrizeValue>0?x2Info.PrizeValue*1.99:x2Info.StartBetValue*1.99,0,1,options,function(value){$('#totalX2AvengerWon').text(CommonUtility.formatMoney(value));});countUpX2PrizeValue.start();$('#stopX2Avenger').show();$('#continuesX2Avenger').show();Config.IsInDouble=true;$('.text_sai').attr("style","position: absolute; margin-top: 54px;");}});}}
+var resultX2WinMessage=function(totalMoneyX2,callback){GuiContents.ShowPopup("Chúc mừng bạn đã thắng "+
+CommonUtility.formatMoney(totalMoneyX2)+
+" Vgold với game Nhân đôi: Truy tìm Loki");$('#popupMessageAvenger').unbind('click');$('#popupMessageAvenger').click(function(){GuiContents.HidePopup();if(timeoutPopup){clearTimeout(timeoutPopup);}
+if(callback){callback();}});if(Config.IsAutoSpin>0){if(timeoutPopup){clearTimeout(timeoutPopup);}
+timeoutPopup=setTimeout(function(){GuiContents.HidePopup();if(callback){callback();}},2000);}}
+var renderResultX2=function(itemId,isStop,callback){if(isStop){$("#itemX2_"+itemId).append('<div class="kq kqs"><img src="'+Config.Url.ROOT+'images/MiniGame/Sai.png" alt="" /></div>');$('.list_nv .nhanvat_item.active > img').css({'opacity':1});$('.list_nv .nhanvat_item .kq').hide();$('.list_nv .nhanvat_item.active .kqs').fadeIn(200);$('.list_nv .nhanvat_item').unbind("click")
+$('.text_sai').removeAttr("style")
+GameAudio.Play('Sound.X2.Lose');$('#txtX2Message').html('Rất tiếc bạn đã thua cuộc');$('.text_sai').removeAttr("style");setTimeout(function(){if(intevalWinX2){clearInterval(intevalWinX2);}
+if(callback)
+callback();},3000);}else{$("#itemX2_"+itemId).append('<div class="kq kqd">                                                                     '+
+'     <div class="show_loki">                                                             '+
+'         <img src="'+Config.Url.ROOT+'images/MiniGame/Loki.png" alt="" style="display:none;" />   '+
+'         <div class="effect_Loki">                                                       '+
+'             <img class="active" src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_00.png" alt="" />'+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_01.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_02.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_03.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_04.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_05.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_06.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_07.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_08.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_09.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_10.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_11.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_12.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_13.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_14.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_15.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_16.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_17.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_18.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_19.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_20.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_21.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_22.png" alt="" />               '+
+'             <img src="'+Config.Url.ROOT+'images/Effect/Loki/Loki_23.png" alt="" />               '+
+'         </div>                                                                          '+
+'     </div>                                                                              '+
+'     <span><img src="'+Config.Url.ROOT+'images/MiniGame/Dung.png" alt="" /></span>                '+
+' </div>                                                                                  '+
+'</div>');intevalWinX2=setInterval(function(){if($('.list_nv .nhanvat_item .kqd .effect_Loki img').last().hasClass('active')){}else{$('.list_nv .nhanvat_item .kqd .effect_Loki img.active').removeClass('active').next().addClass('active');}},70);$('.text_sai').removeAttr("style")
+$('.list_nv .nhanvat_item .kqd .show_loki > img').delay(1000).fadeIn(500);$('.list_nv .nhanvat_item .kqd span, .text_note').delay(1500).fadeIn(500);$('.list_nv .nhanvat_item .kq').hide();$('.list_nv .nhanvat_item.active > img').css({'opacity':0});$('.list_nv .nhanvat_item.active .kqd').fadeIn(500);GameAudio.Play('Sound.X2.Win');setTimeout(function(){if(intevalWinX2){clearInterval(intevalWinX2);}
+if(callback)
+callback();},3000);}}
+var initDoubleGame=function(x2Info){$('#stopX2Avenger').show();$('#continuesX2Avenger').show();Config.CurrentState=5;Config.IsInDouble=true;Config.X2CurrentStep=x2Info.CurrentStep;var lastPrize;if(x2Info.CurrentStep===0){$('#continuesX2Avenger').hide();var lastPrize=x2Info.StartBetValue;}else{var lastPrize=x2Info.StartBetValue/1.99;}
+var countUpLastPrize=new CDCountUp(null,0,lastPrize,0,1,options,function(value){$('#totalMoneyWinX2Avenger').text(CommonUtility.formatMoney(value));});countUpLastPrize.start();var countUpX2PrizeValue=new CDCountUp(null,0,lastPrize*1.99,0,1,options,function(value){$('#totalX2AvengerWon').text(CommonUtility.formatMoney(value));});countUpX2PrizeValue.start();};var renderDoubleGame=function(){$('.list_nv .nhanvat_item').removeClass('active');$('.list_nv .nhanvat_item > img').css({'opacity':1});$('.list_nv .nhanvat_item').css({'opacity':.5});$('.list_nv .nhanvat_item .kq').remove();$('#stopX2Avenger').show();$('#continuesX2Avenger').hide();$('.list_nv .nhanvat_item').unbind("click");$('.list_nv .nhanvat_item').click(function(){GameAudio.Play('Sound.X2.Click');$('.list_nv .nhanvat_item').unbind("click");$('.list_nv .nhanvat_item').removeClass('active');$('.list_nv .nhanvat_item > img').css({'opacity':1});$('.list_nv .nhanvat_item').css({'opacity':.5});$(this).addClass('active').css({'opacity':1});$('#txtX2Message').html("");App.gameHub.server.PlayX2Game($(this).attr("dataimg"));});$("#moneyWinX2Avenger").html("");$('.text_sai').attr("style","position: absolute; margin-top: 54px;")};window.DoubleLogic=doubleLogic;})(window,jQuery);

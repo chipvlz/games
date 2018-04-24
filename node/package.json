@@ -1,0 +1,15 @@
+{
+  "name": "chat_with_node_js",
+  "description": "Chat with nodejs - Viblo - Framgia VN",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "~4.16.3",
+    "socket.io": ""
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD"
+}

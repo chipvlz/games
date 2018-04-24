@@ -1,0 +1,382 @@
+#minipoker {
+    font-family: helveticaneuecondensedbold;
+    position: relative;
+    height: 285px;
+    width: 435px;
+    padding: 0px;
+    margin: 0px;
+}
+
+    #minipoker canvas {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+
+    #minipoker .dragbox_minipoker {
+        height: 240px;
+        width: 297px;
+        position: absolute;
+        top: 13px;
+        left: 8px;
+        z-index: 99;
+    }
+
+#md_minipoker .jBox-closeButton, #md_minipoker .minipoker-header {
+    display: none;
+}
+
+#minipoker #minipoker_close, #minipoker #minipoker_history_btn, #minipoker #minipoker_bangxephang_btn, #minipoker #minipoker_huongdanchoi_btn {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    z-index: 999999999;
+    cursor: pointer;
+}
+
+#minipoker #minipoker_close {
+    top: 50px;
+    right: 20px;
+}
+
+    #minipoker #minipoker_close img, #minipoker #minipoker_history_btn img, #minipoker #minipoker_bangxephang_btn img, #minipoker #minipoker_huongdanchoi_btn img {
+        transition: all 0.3s;
+    }
+
+        #minipoker #minipoker_close img:hover, #minipoker #minipoker_history_btn img:hover, #minipoker #minipoker_bangxephang_btn img:hover, #minipoker #minipoker_huongdanchoi_btn img:hover {
+            -webkit-transform: scale(1.1, 1.1);
+            -moz-transform: scale(1.1, 1.1);
+            -ms-transform: scale(1.1, 1.1);
+            -o-transform: scale(1.1, 1.1);
+            transform: scale(1.1, 1.1);
+        }
+
+#minipoker #minipoker_history_btn {
+    top: 34px;
+    left: 282px;
+}
+
+#minipoker #minipoker_bangxephang_btn {
+    top: 45px;
+    left: 35px;
+}
+
+#minipoker #minipoker_huongdanchoi_btn {
+    top: 35px;
+    left: 320px;
+}
+
+#minipoker #mnpk_500, #minipoker #mnpk_1000, #minipoker #mnpk_2000, #minipoker #mnpk_5000, #minipoker #mnpk_10000, #minipoker #mnpk_100, #minipoker #mnpk_1k, #minipoker #mnpk_10k {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    z-index: 999999999;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 2px 2px 13px #333;
+}
+
+#minipoker #mnpk_500 {
+    top: 204px;
+    left: 75px;
+}
+
+#minipoker #mnpk_100 {
+    top: 204px;
+    left: 75px;
+}
+
+#minipoker #mnpk_1000 {
+    top: 204px;
+    left: 115px;
+}
+
+#minipoker #mnpk_1k {
+    top: 204px;
+    left: 120px;
+}
+
+#minipoker #mnpk_2000 {
+    top: 204px;
+    left: 155px;
+}
+
+#minipoker #mnpk_10k {
+    top: 204px;
+    left: 165px;
+}
+
+#minipoker #mnpk_5000 {
+    top: 204px;
+    left: 195px;
+}
+
+#minipoker #mnpk_10000 {
+    top: 204px;
+    left: 235px;
+}
+
+#minipoker .muccuoc {
+    position: relative;
+}
+
+#minipoker #mnpk_500 .money_bet, #minipoker #mnpk_1000 .money_bet, #minipoker #mnpk_2000 .money_bet, #minipoker #mnpk_5000 .money_bet, #minipoker #mnpk_10000 .money_bet, #minipoker #mnpk_100 .money_bet, #minipoker #mnpk_1k .money_bet, #minipoker #mnpk_10k .money_bet {
+    color: #1f1730;
+    font-size: 12px;
+    font-weight: bold;
+    position: absolute;
+    top: 9px;
+    width: 36px;
+    text-align: center;
+}
+
+#minipoker #mnpk_500 .money_bet_focus, #minipoker #mnpk_1000 .money_bet_focus, #minipoker #mnpk_2000 .money_bet_focus, #minipoker #mnpk_5000 .money_bet_focus, #minipoker #mnpk_10000 .money_bet_focus, #mnpk_100 .money_bet_focus, #mnpk_1k .money_bet_focus, #mnpk_10k .money_bet_focus {
+    color: #ffffff !important;
+    font-size: 12px;
+    font-weight: bold;
+    /*text-shadow: 1px 1px 1px #607d8b;*/
+    position: absolute;
+    top: 9px;
+    width: 36px;
+    text-align: center;
+}
+
+
+#minipoker #jackpot_money_mnpk {
+    width: 142px;
+    height: 35px;
+    position: absolute;
+    z-index: 999999999;
+    top: 62px;
+    left: 113px;
+    text-align: left;
+    padding-left: 32px;
+    color: #fef84b;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 34px;
+    z-index: 9;
+}
+
+
+#minipoker #msg_mnpk {
+    width: 280px;
+    height: 30px;
+    position: absolute;
+    z-index: 999999999;
+    top: 260px;
+    left: 62px;
+    color: #000000;
+    font-size: 14px;
+    background: #fff600;
+    font-family: 'helveticaneuecondensedbold';
+    line-height: 30px;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #FFFFFF;
+}
+
+#value1 {
+    position: absolute;
+    top: 121px;
+    left: 53px;
+    width: 46px;
+    height: 68px;
+    z-index: 9
+}
+
+#value2 {
+    position: absolute;
+    top: 121px;
+    left: 103px;
+    width: 46px;
+    height: 68px;
+    z-index: 9
+}
+
+#value3 {
+    position: absolute;
+    top: 121px;
+    left: 153px;
+    width: 46px;
+    height: 68px;
+    z-index: 9
+}
+
+#value4 {
+    position: absolute;
+    top: 121px;
+    left: 203px;
+    width: 46px;
+    height: 68px;
+    z-index: 9
+}
+
+#value5 {
+    position: absolute;
+    top: 121px;
+    left: 253px;
+    width: 46px;
+    height: 68px;
+    z-index: 9
+}
+
+#value1 img {
+    width: 46px;
+    height: 68px;
+}
+
+#value2 img {
+    width: 46px;
+    height: 68px;
+}
+
+#value3 img {
+    width: 46px;
+    height: 68px;
+}
+
+#value4 img {
+    width: 46px;
+    height: 68px;
+}
+
+#value5 img {
+    width: 46px;
+    height: 68px;
+}
+
+#tuquay_check_mnpk {
+    position: absolute;
+    top: 195px;
+    right: 99px;
+    font-size: 11px;
+    color: #ffffff;
+    font-weight: bold;
+    z-index: 9999;
+    width: 19px;
+    height: 19px;
+    text-align: center;
+}
+
+    #tuquay_check_mnpk img {
+        width: 21px;
+    }
+
+#tuquay_text_mnpk {
+    position: absolute;
+    top: 220px;
+    right: 87px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+    z-index: 9999;
+}
+
+
+#minipoker #trung_jackpot_mnpk {
+    width: 310px;
+    height: 310px;
+    position: absolute;
+    z-index: 999999998;
+    top: -20px;
+    left: 23px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000000;
+    background: url(../img/jackpot.png) center top no-repeat;
+    background-size: cover;
+    line-height: 30px;
+    display: none;
+}
+
+
+#md_minipoker_history, #md_minipoker_bangxephang {
+    width: 659px;
+    height: 383px;
+    background: url(../img/popup.png) top left no-repeat;
+}
+
+#list_minipoker_history, #list_minipoker_bangxephang {
+    height: 305px;
+    margin-top: 10px;
+}
+
+#md_minipoker_history, .content_minipoker, #md_minipoker_bangxephang, .content_bangxephang {
+    display: none;
+}
+
+    #md_minipoker_history .agency-header, #md_minipoker_bangxephang .agency-header {
+        text-align: center;
+    }
+
+#popup_minipoker_history .jBox-closeButton, #popup_minipoker_bangxephang .jBox-closeButton {
+    width: 37px;
+    height: 37px;
+    top: 10px;
+    right: 4px;
+    opacity: 1;
+}
+
+.jBox-closeButton-box:before {
+    display: none;
+}
+
+#list_minipoker_history .color0, #list_minipoker_bangxephang .color0 {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#list_minipoker_history .color1, #list_minipoker_bangxephang .color1 {
+    color: #ffe155;
+}
+
+#list_minipoker_history .color2, #list_minipoker_bangxephang .color2 {
+    color: #ceff6e;
+}
+
+#list_minipoker_history .color3, #list_minipoker_bangxephang .color3 {
+    color: #ff7836;
+}
+
+#list_minipoker_history .color4, #list_minipoker_bangxephang .color4 {
+    color: #9E9E9E;
+}
+
+#list_minipoker_history, #list_minipoker_bangxephang {
+    width: 630px;
+    margin: 10px auto 0px 20px;
+}
+
+#md_minipoker_history .agency-title, #md_minipoker_bangxephang .agency-title {
+    margin-bottom: 0px;
+}
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+    border-top: none;
+    padding: 7px 6px;
+    font-size: 12px;
+}
+
+#list_minipoker_history .table > tbody > tr.havebg {
+    background: url(../img/khung-lich-dat-cuoc.png) top left no-repeat;
+}
+
+#list_minipoker_bangxephang .table > tbody > tr.havebg {
+    background: url(../img/khung-vinh-danh.png) top left no-repeat;
+}
+
+#popup_minipoker_history .jBox-closeButton, #popup_minipoker_bangxephang .jBox-closeButton, #popup_minipoker_huongdan .jBox-closeButton {
+    background: transparent;
+    background-size: contain;
+    width: 37px;
+    height: 37px;
+    top: 2px;
+    right: 9px;
+    opacity: 1;
+}
+
+    #popup_minipoker_history .jBox-closeButton svg, #popup_minipoker_bangxephang .jBox-closeButton svg, #popup_minipoker_huongdan .jBox-closeButton svg {
+        opacity: 0;
+    }

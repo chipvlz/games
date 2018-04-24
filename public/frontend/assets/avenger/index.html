@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from vzon.club/avenger/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Apr 2018 10:06:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta name="viewport" content="width=device-width" />
+<link href="css/jquery.mCustomScrollbar.min.css" rel="stylesheet" />
+<link href="css/style.css" rel="stylesheet" />
+<link href="css/animate.css" rel="stylesheet" />
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="js/createjs.min.js"></script>
+<script src="js/jquery.signalR-2.2.2.min.js"></script>
+<script src="Scripts/Common/common.js"></script>
+<script src="Scripts/Common/CommonUtility.js"></script>
+<script src="Scripts/Common/preloader.js"></script>
+<script src="Scripts/Common/countUp.js"></script>
+<script src="Scripts/Common/gameAudio.js"></script>
+<script src="Scripts/Common/chat/chatGui.js"></script>
+<script src="Scripts/Common/chat/chatHub.js"></script>
+<script src="Scripts/Game/Matrix.js"></script>
+<script src="Scripts/Game/GuiContents.js"></script>
+<script src="Scripts/Game/GameLogic.js"></script>
+<script src="Scripts/Game/BonusLogic.js"></script>
+<script src="Scripts/Game/x2Logic.js"></script>
+<script src="Scripts/API/GameAPI.js"></script>
+<script src="Scripts/Hubs/HubManager.js"></script>
+<script src="Scripts/Hubs/GameHub.js"></script>
+<script src="Scripts/Config.js"></script>
+<script src="Scripts/App.js"></script>
+<script src="../../event.vzon.club/Events/EventAlpha/eventvuaphattai.js"></script>
+<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type="text/javascript" src="../Scripts/header.js"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-115047952-1');
+    </script>
+<title>Avengers - Game quay hũ HOT nhất 2018</title>
+<meta name="Description" content="Avengers - Game quay hũ HOT nhất 2018 - Quay hũ thành triệu phú">
+<link rel="Canonical" href="../avengers.html">
+<meta name="Author" content="Avengers">
+<meta charset="utf-8">
+<meta name="Robots" content="noodp">
+<meta property="og:title" content="Avengers - Game quay hũ HOT nhất 2018">
+<meta property="og:description" content="Avengers - Game quay hũ HOT nhất 2018 - Quay hũ thành triệu phú">
+<meta property="og:url" content="http://vzon.club/avengers">
+<meta property="fb:app_id" content="2043267012628342">
+<meta property="og:image" content="http://vzon.net/wp-content/uploads/2018/04/thumb.jpg">
+<meta property="article:author" content="https://www.facebook.com/vzon.club">
+<meta property="og:type" content="website">
+<link rel="icon" type="image/png" href="Avengers_favico.png" />
+</head>
+<body>
+<div id="divHeaderInfo"></div>
+<div id="AvengerEvent"></div>
+<div class="avg_popup avg_popup_small" id="popupMessageAvenger" style="display: none;z-index: 99999">
+<span class="shadow"></span>
+<div class="inner">
+<span class="popup_name"><img src="images/button/Txt_thongbao.png" alt=""></span>
+<span class="close_pop"><img onclick="GuiContents.HidePopup()" src="images/button/bt_Close_PopBe.png" alt=""></span>
+<div class="content_pop">
+<p id="popupMessageContentAvenger"></p>
+<a href="javascript:;" onclick="App.Bonus.HideBonus()"><img src="images/button/Btn_DongY.png" alt="" /></a>
+</div>
+</div>
+</div>
+<div class="avg_wrapper" id="avengerMainGame">
+<div style="clear:both;"></div>
+<div class="avg_frame">
+<div class="vinhdanh_box">
+<a href="javascript:void(0)" class="btn_vinhdanh"><img src="images/button/bt_VinhDanh.png" alt="" /></a>
+<div class="vinhdanh_detail" style="display:none;">
+<a href="javascript:void(0)" class="close" onclick="Api.closePoup()"><img src="images/button/bt_Close.png" alt="" /></a>
+<div class="pop_content" id="vinhdanh_detail_content">
+<div id="vinhdanh_detail_contentDetail">
+</div>
+</div>
+</div>
+</div>
+<div class="chat_box">
+<a href="javascript:void(0)" class="btn_chat"><img src="images/button/bt_Chat.png" alt="" /></a>
+<div class="chat_detail" style="display:none;">
+<div class="main_chat">
+<a href="javascript:void(0)" class="close"><img src="images/button/bt_Close.png" alt="" /></a>
+<div class="content_chat">
+<div id="avengerChatContent"></div>
+</div>
+<div class="input_chat">
+<input type="text" id="chatTextBoxAvenger" placeholder="Nhập nội dung" />
+<a href="javascript:void(0)" onclick="avengerChat.sendMessage()" id="vqs_btn_send_chat"><img src="images/button/bt_Gui.png" alt="" /></a>
+</div>
+</div>
+</div>
+</div>
+<div class="setting_detail" style="display:none;">
+<a href="javascript:void(0)" class="close"><img src="images/button/bt_Close.png" alt="" /></a>
+<div class="main_setting">
+<a href="javascript:void(0)" class="set_sound" id="setting-sound"></a>
+<a href="javascript:void(0)" class="set_soundbg" id="setting-music"></a>
+<div class="line"></div>
+<a href="../index.html" class="add_gold"></a>
+</div>
+</div>
+<div class="nhanvat_left"><img src="images/UI/SpiderMan.png" alt="" /></div>
+<div class="nhanvat_right">
+<img src="images/UI/Vision.png" alt="" />
+<div class="set_vision set_vision01">
+<img src="images/Effect/TayVision/TayVision_00.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_01.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_02.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_03.png" alt="" />
+<img class="active" src="images/Effect/TayVision/TayVision_04.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_05.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_06.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_07.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_08.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_09.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_10.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_11.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_12.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_13.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_14.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_15.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_16.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_17.png" alt="" />
+</div>
+<div class="set_vision set_vision02">
+<img src="images/Effect/TayVision/TayVision_00.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_01.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_02.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_03.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_04.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_05.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_06.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_07.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_08.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_09.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_10.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_11.png" alt="" />
+<img class="active" src="images/Effect/TayVision/TayVision_12.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_13.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_14.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_15.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_16.png" alt="" />
+<img src="images/Effect/TayVision/TayVision_17.png" alt="" />
+</div>
+<div class="set_vision set_vision03">
+<img src="images/Effect/VienNgocSang/NgocSang_20.png" alt="" />
+</div>
+</div>
+<div class="avg_top_ctrl">
+<a href="javascript:void(0)" id="btnPlayReal" class="play changeModePlay"></a>
+<div class="avg_main_btntop">
+<a href="javascript:void(0)" onclick="Api.ShowHuongDan()" class="avg_btn btn_docs"><img src="images/button/bt_HuongDan.png" alt="" /></a>
+<a href="javascript:void(0)" onclick="Api.ShowTableStatistic()" class="avg_btn btn_top"><img src="images/button/bt_ThongKeHu.png" alt="" /></a>
+<span class="fouds" id="jackpotAvenger">0</span>
+<a href="javascript:void(0)" onclick="Api.ShowHistory()" class="avg_btn btn_history"><img src="images/button/bt_LichSu.png" alt="" /></a>
+<a href="javascript:void(0)" class="avg_btn btn_setting"><img src="images/button/bt_Option.png" alt="" /></a>
+</div>
+<a href="javascript:void(0)" id="btnPlayTry" class="play_demo changeModePlay"></a>
+</div>
+
+<div class="main_frame">
+<div class="bor_frame">
+<span class="bor_top"></span>
+<span class="bor_bot"></span>
+<span class="bor_goc01"></span>
+<span class="bor_goc02"></span>
+<span class="bor_goc03"></span>
+<span class="bor_goc04"></span>
+</div>
+<span class="display_quayMP" style="display: none" id="avengerFreeSpinDiv">Miễn Phí <strong id="totalAvengerFreeSpin">0</strong> Lượt Quay</span>
+<div id="loadingDivAvenger" class="loading">
+ <img src="images/UI/Loading.png" alt="" />
+<span>Loading...<br /><label id="loadingAvenger">0%</label></span>
+</div>
+<canvas style="display: none; " width="800" height="486" id="canvasAvenger"></canvas>
+<div class="effect_thangMoney moneyWinAvenger" style="display: none; ">
+<div class="text_thangMoney">
+<span class="moneyWinContentAvenger">0</span>
+</div>
+</div>
+<div class="list_items" style="display: none" id="effectWinAvenger">
+<div class="effect_thangthuong" id="effectSmallWinAvenger" style="display: none">
+<img class="active" src="images/Effect/TienTung/Thang/Thang_00.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_01.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_02.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_03.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_04.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_05.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_06.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_07.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_08.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_09.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_10.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_11.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_12.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_13.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_14.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_15.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_16.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_17.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_18.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_19.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_20.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_21.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_22.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_23.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_24.png" alt="" />
+<img src="images/Effect/TienTung/Thang/Thang_25.png" alt="" />
+</div>
+<div id="effectWinContentAvenger" style="display: none">
+</div>
+</div>
+<div id="avengerX2Game" style="display: none"></div>
+</div>
+
+<div class="avg_bot">
+<a href="javascript:void(0)" onclick="Api.bangThuong();" class="avg_btn btn_bangthuong"><img src="images/button/btn_bangthuong.png" alt="" /></a>
+<div class="muc_cuoc" id="changeRoomAvenger">
+<div class="choose_money" style="display:none;">
+<span>100K</span>
+<span>10K</span>
+<span>1K</span>
+</div>
+<span id="currentRoomAvenger">1K</span>
+</div>
+<div class="money">
+<p>Thắng: <span id="totalWinAvenger">0</span></p>
+<p>Số dư: <span id="totalBalanceAvenger">0</span></p>
+</div>
+<a href="javascript:void(0)" class="btn_x2" id="x2GameAvenger"><img src="images/button/bt_x2.png" alt="" /></a>
+<div class="tu_quay" id="btnAutoSpinAvenger">
+<div class="choose_money" id="panelAutoSpinAvenger" style="display:none;">
+<span>Vô Hạn</span>
+<span>5000</span>
+<span>1000</span>
+<span>100</span>
+</div>
+<span id="totalAvengerAutoSpin">0</span>
+</div>
+<div class="btn_quay">
+<a href="javascript:void(0)"><img id="avengerBtnSpin" src="images/button/btn_Quay.png" alt="" /></a>
+<div class="effect_Quay">
+<img src="images/Scan.png" id="btnSpinAvenger" alt="" />
+</div>
+</div>
+</div>
+
+</div>
+<div class="footer">
+<img src="images/UI/Footer.png" alt="" />
+</div>
+</div>
+<div id="poupHistory"></div>
+<div id="BonusGameAvenger" style="display: none"></div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var accountId = 0;
+        var isLogin = 0;
+        if (accountId > 0) {
+            isLogin = 1;
+        }
+        var infoHeader = {
+            ServiceId: 50005,
+            UrlRoot: location.href,
+            LoginUrl: 'http://vzon.club/' + 'Api/AccountApi/Login',
+            LogoutUrl: 'http://vzon.club/' + 'Api/AccountApi/logout?servicesId=50005',
+            IsLogin: isLogin,
+            AccountId: accountId
+        }
+        GlobalHeader.InitHeader(infoHeader);
+        if (typeof (EventAvenger) === "object") {
+            EventAvenger.InitEvent();
+        }
+        $("#AvengerEvent" ).draggable();
+        Config.Url.ROOT = 'index.html';
+        Config.Url.Game_Hub = 'http://avw.vzon.club/';
+        Config.Url.Game_API = 'http://avw.vzon.club/api/';
+        Config.Url.Chat_Hub = 'http://chatslot.vzon.club/';
+        avengerChat = new window.ChatAvenger();
+
+        App.StartLogic();
+        Api = new window.GameAPI(); 
+        
+        if (location.href == Config.Url.ROOT.substring(0, Config.Url.ROOT.length - 1)) {
+            location.href = Config.Url.ROOT
+        }
+
+        
+        setInterval(function(){ 
+            if($('.nhanvat_right .set_vision01 img').last().hasClass('active')){
+                $('.nhanvat_right .set_vision01 img.active').removeClass('active');
+                $('.nhanvat_right .set_vision01 img').first().addClass('active');	
+            }else{
+                $('.nhanvat_right .set_vision01 img.active').removeClass('active').next().addClass('active');	
+            }
+        }, 80);
+
+        setInterval(function(){ 
+            if($('.nhanvat_right .set_vision02 img').last().hasClass('active')){
+                $('.nhanvat_right .set_vision02 img.active').removeClass('active');
+                $('.nhanvat_right .set_vision02 img').first().addClass('active');	
+            }else{
+                $('.nhanvat_right .set_vision02 img.active').removeClass('active').next().addClass('active');	
+            }
+        }, 80);
+	
+    })
+</script>
+</body>
+
+<!-- Mirrored from vzon.club/avenger/ by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 22 Apr 2018 10:07:49 GMT -->
+</html>

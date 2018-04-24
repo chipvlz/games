@@ -1,0 +1,216 @@
+.daomo .dragbox_daomo { height: 110px; width: 320px; position: absolute; top: 10px; left: 80px; cursor: move; z-index: 9999; }
+#md_daomo .jBox-closeButton, #md_daomo .daomo-header { display: none; }
+/* Sets the background image for the wheel */
+.daomo
+{
+    background-image: url(../images/daomo.png);
+    background-position: 6px 20px;
+    background-repeat: no-repeat;
+    font-family: helveticaneuecondensedbold;
+    position:relative; 
+    height:412px; 
+    width:484px;
+}
+div#phiendaomo {
+    display: table;
+    position: absolute;
+    top: 175px;
+    left: 32px;
+    color: #FFF;
+    font-size: 16px;
+}
+
+.daomo #daomo_close, .daomo #daomo_history_btn, .daomo #daomo_bangxephang_btn, .daomo #daomo_huongdanchoi_btn {width:61px; height:61px; position: absolute; z-index:999999999; cursor: pointer;}
+.daomo #daomo_close { top: 132px; right: -27px;}
+.daomo #daomo_history_btn { top: 100px; right: 103px; }
+.daomo #daomo_bangxephang_btn {top: 100px; left: 80px; }
+.daomo #daomo_huongdanchoi_btn {    top: 100px; right: 59px; }
+.daomo .mining_btn_muccuoc {
+    width: 51px;
+    height: 51px;
+    position: absolute;
+    z-index: 999999999;
+    cursor: pointer;
+}
+.daomo #daomo_10    {top: 138px; left: 55px;}
+.daomo #daomo_100 {
+    top: 205px;
+    left: 26px;
+}
+.daomo #daomo_1000 {
+    top: 256px;
+    left: 25px;
+}
+.daomo #daomo_10000 {
+    top: 305px;
+    left: 27px;
+}
+.daomo #daomo_100000  {top: 331px; left: 55px;}
+.daomo .mining_btn_muccuoc .money_bet {
+    color: #212121;
+    font-size: 17px;
+    font-weight: bold;
+    position: absolute;
+    top: 14px;
+    width: 51px;
+    text-align: center;
+    text-shadow: 1px 1px 1px #607d8b;
+}
+.daomo .mining_btn_muccuoc .money_bet_focus {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #607d8b;
+    position: absolute;
+    top: 14px;
+    width: 51px;
+    text-align: center;
+}
+.daomo #jackpot_money_daomo {    
+    width: 135px;
+    height: 32px;
+    position: absolute;
+    z-index: 999999999;
+    top: 129px;
+    left: 150px;
+    text-align: center;
+    color: #fff95b;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 32px;
+}
+.daomo #msg_daomo {
+   
+    width: 370px;
+    height: 35px;
+    line-height: 35px;
+    position: absolute;
+    z-index: 999999990;
+    top: 415px;
+    left: 50px;
+    color: #000;
+    font-size: 13px;
+    text-align: center;
+    font-weight: bold;
+    background: #fff600;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #FFFFFF;
+}
+
+.jBox-closeButton-box:before{display: none;}
+
+#tuquay_check_daomo {
+    position: absolute;
+    top: 303px;
+    right: 62px;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: bold;
+    z-index: 9999;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+}
+
+#tuquay_text_daomo {
+    position: absolute;
+    top: 333px;
+    right: 42px;
+    font-size: 14px;
+    color: #FFF;
+    font-weight: bold;
+    z-index: 9999;
+}
+
+#soluot_text_daomo {
+    position: absolute;
+    top: 165px;
+    right: 60px;
+    font-size: 16px;
+    color: #FFFFFF;
+    font-weight: bold;
+    z-index: 9999;
+    line-height: 18px;
+    text-align: center;
+}
+#soluot_text_daomo .soluotconlai{ 
+    font-size: 30px;
+    line-height: 25px;
+}
+
+#tongthang_text_daomo {
+    position: absolute;
+    top: 388px;
+    left: 122px;
+    font-size: 15px;
+    color: #FFFFFF;
+    font-weight: bold;
+    z-index: 9999;
+    line-height: 18px;
+}
+
+#tongdat_text_daomo {
+    position: absolute;
+    top: 388px;
+    right: 123px;
+    font-size: 15px;
+    color: #FFFFFF;
+    font-weight: bold;
+    z-index: 9999;
+    line-height: 18px;
+}
+
+#btn_daomo{
+    position: absolute;
+    top:219px;
+    right:20px;
+    z-index: 9999;
+    width: 77px;
+    height: 77px;
+    cursor: pointer;
+
+}
+
+#btn_daomo:hover{
+    -webkit-filter: brightness(110%);
+    
+}
+
+#btn_ramo {
+    position: absolute;
+    top: 219px;
+    right: 20px;
+    z-index: 9999;
+    width: 77px;
+    height: 77px;
+    cursor: pointer;
+}
+
+#btn_ramo:hover{
+    -webkit-filter: brightness(110%);
+}
+
+#game_treasure {
+    top: 163px;
+    position: relative;
+    width: 265px;
+    height: 220px;
+    display: table;
+    left: 110px;
+}
+
+#popup_mining_history .jBox-closeButton, #popup_mining_bangxephang .jBox-closeButton, #popup_mining_huongdan .jBox-closeButton, #md_mining_content .jBox-closeButton {
+    background: transparent;
+    background-size: 100% 100%;
+    width: 35px;
+    height: 35px;
+    top: 5px;
+    right: 6px;
+    opacity: 1;
+}
+
+#popup_mining_history .jBox-closeButton svg, #popup_mining_bangxephang .jBox-closeButton svg, #popup_mining_huongdan .jBox-closeButton svg, #md_mining_content .jBox-closeButton svg {
+    opacity: 0;
+}
+

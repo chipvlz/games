@@ -1,0 +1,588 @@
+@font-face {
+    font-family: fontLabai;
+    src: url(../font/CARDC___.TTF);
+}
+
+.caothap #box_ketqua {
+    font-family: fontLabai;
+}
+
+.caothap .dragbox {
+    height: 110px;
+    width: 320px;
+    position: absolute;
+    top: 10px;
+    left: 80px;
+    cursor: move;
+}
+
+#md_caothap .jBox-closeButton, #md_caothap .caothap-header {
+    display: none;
+}
+/* Sets the background image for the wheel */
+.caothap {
+    background-image: url(../img/tren-duoi.png);
+    background-position: top left;
+    background-repeat: no-repeat;
+    font-family: helveticaneuecondensedbold;
+    position: relative;
+    height: 362px;
+    width: 433px;
+}
+
+    .caothap #caothap_close, .caothap #caothap_history_btn, .caothap #caothap_bangxephang_btn, .caothap #caothap_huongdanchoi_btn {
+        width: 44px;
+        height: 42px;
+        position: absolute;
+        z-index: 999999999;
+        cursor: pointer;
+    }
+
+    .caothap #caothap_close {
+        top: 100px;
+        right: -7px;
+    }
+
+    .caothap #caothap_history_btn {
+        top: 60px;
+        left: 295px;
+    }
+
+    .caothap #caothap_bangxephang_btn {
+        top: 53px;
+        left: 80px;
+    }
+
+    .caothap #caothap_huongdanchoi_btn {
+        top: 61px;
+        left: 332px;
+    }
+
+    .caothap #muccuoc500, .caothap #muccuoc1000, .caothap #muccuoc2000, .caothap #muccuoc5000, .caothap #muccuoc10000, .caothap #muccuoc1k, .caothap #muccuoc10k, .caothap #muccuoc50k, .caothap #muccuoc100k, .caothap #muccuoc500k {
+        width: 39px;
+        height: 39px;
+        position: absolute;
+        z-index: 999999999;
+        cursor: pointer;
+    }
+
+    .caothap #muccuoc500 {
+        top: 97px;
+        left: 63px;
+        z-index: 999;
+    }
+
+    .caothap #muccuoc1k {
+        top: 97px;
+        left: 63px;
+        z-index: 999;
+    }
+
+    .caothap #muccuoc1000 {
+        top: 132px;
+        left: 39px;
+    }
+
+    .caothap #muccuoc10k {
+        top: 132px;
+        left: 39px;
+    }
+
+    .caothap #muccuoc2000 {
+        top: 173px;
+        left: 33px;
+    }
+
+    .caothap #muccuoc50k {
+        top: 173px;
+        left: 33px;
+    }
+
+    .caothap #muccuoc5000 {
+        top: 216px;
+        left: 38px;
+    }
+
+    .caothap #muccuoc100k {
+        top: 216px;
+        left: 38px;
+    }
+
+    .caothap #muccuoc10000 {
+        top: 252px;
+        left: 61px;
+    }
+
+    .caothap #muccuoc500k {
+        top: 252px;
+        left: 61px;
+    }
+
+    .caothap .muccuoc {
+        position: relative;
+    }
+
+    .caothap #muccuoc500 .money_bet, .caothap #muccuoc1000 .money_bet, .caothap #muccuoc2000 .money_bet, .caothap #muccuoc5000 .money_bet, .caothap #muccuoc10000 .money_bet, .caothap #muccuoc1k .money_bet, .caothap #muccuoc10k .money_bet, .caothap #muccuoc50k .money_bet, .caothap #muccuoc100k .money_bet, .caothap #muccuoc500k .money_bet {
+        color: #212121;
+        font-size: 13px;
+        font-weight: bold;
+        position: absolute;
+        top: 11px;
+        width: 39px;
+        text-align: center;
+        text-shadow: 1px 1px 1px #607d8b;
+    }
+
+    .caothap #muccuoc500 .money_bet_focus, .caothap #muccuoc1000 .money_bet_focus, .caothap #muccuoc2000 .money_bet_focus, .caothap #muccuoc5000 .money_bet_focus, .caothap #muccuoc10000 .money_bet_focus, .caothap #muccuoc1k .money_bet_focus, .caothap #muccuoc10k .money_bet_focus, .caothap #muccuoc50k .money_bet_focus, .caothap #muccuoc100k .money_bet_focus, .caothap #muccuoc500k .money_bet_focus {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: bold;
+        text-shadow: 1px 1px 1px #607d8b;
+        position: absolute;
+        top: 10px;
+        width: 39px;
+        text-align: center;
+    }
+
+    .caothap .caothap_hu {
+        width: 39px;
+        height: 37px;
+        position: absolute;
+        z-index: 999999998;
+        top: 136px;
+        left: 140px;
+    }
+
+    .caothap .caothap_hu_effect1 {
+        width: 33px;
+        height: 33px;
+        position: absolute;
+        z-index: 999999999;
+        top: 130px;
+        left: 130px;
+        animation: translate_part-1 3s infinite;
+        animation-delay: 3s;
+    }
+
+    .caothap .caothap_hu_effect2 {
+        width: 33px;
+        height: 33px;
+        position: absolute;
+        z-index: 999999999;
+        top: 125px;
+        left: 150px;
+        animation: translate_part-1 2s infinite;
+        animation-delay: 2s;
+    }
+
+    .caothap .caothap_hu_effect3 {
+        width: 33px;
+        height: 33px;
+        position: absolute;
+        z-index: 999999999;
+        top: 147px;
+        left: 150px;
+        animation: translate_part-1 3s infinite;
+        animation-delay: 3s;
+    }
+
+    .caothap .caothap_hu_effect4 {
+        width: 33px;
+        height: 33px;
+        position: absolute;
+        z-index: 999999999;
+        top: 145px;
+        left: 136px;
+        animation: translate_part-1 2s infinite;
+        animation-delay: 2s;
+    }
+
+    .caothap #jackpot_money {
+        width: 153px;
+        height: 35px;
+        position: absolute;
+        z-index: 9;
+        top: 86px;
+        left: 165px;
+        text-align: left;
+        color: #fff45c;
+        font-size: 19px;
+        font-family: 'helveticaneuecondensedblack';
+        line-height: 34px;
+    }
+
+    .caothap #labai {
+        width: 80px;
+        height: 108px;
+        position: absolute;
+        z-index: 999999990;
+        top: 135px;
+        left: 124px;
+    }
+
+    .caothap .labai {
+        position: relative;
+    }
+
+        .caothap .labai #so_labai {
+            position: absolute;
+            top: 2px;
+            left: 12px;
+            font-size: 30px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .caothap .labai #chat_labai1 {
+            position: absolute;
+            top: 39px;
+            left: 12px;
+            width: 16px;
+            height: 16px;
+            display: none;
+        }
+
+            .caothap .labai #chat_labai1 img, .caothap .labai #chat_labai2 img, .caothap .labai #hinh_labai img {
+                width: 100%;
+            }
+
+        .caothap .labai #chat_labai2 {
+            position: absolute;
+            top: 11px;
+            left: 42px;
+            width: 16px;
+            height: 16px;
+            display: none;
+        }
+
+        .caothap .labai #hinh_labai {
+            position: absolute;
+            bottom: 12px;
+            right: 10px;
+            display: none;
+        }
+
+.bg_labai {
+    width: 80px;
+    height: 108px;
+}
+
+.caothap #msg {
+    width: 247px;
+    position: absolute;
+    z-index: 999999990;
+    top: 330px;
+    left: 94px;
+    font-size: 13px;
+    font-weight: bold;
+    background: url(../img/bg-text.png) center top no-repeat;
+    background-size: cover;
+    background: #ffeb35;
+    color: #000000;
+    padding: 5px 3px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #FFFFFF;
+    font-family: 'helveticaneuecondensedbold';
+}
+
+.caothap #timer {
+    width: 160px;
+    height: 18px;
+    position: absolute;
+    z-index: 999999989;
+    top: 243px;
+    left: 86px;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000000;
+    font-family: 'helveticaneuecondensedbold';
+}
+
+.caothap #btn_start {
+    width: 63px;
+    height: 63px;
+    position: absolute;
+    z-index: 999999999;
+    top: 160px;
+    left: 132px;
+    cursor: pointer;
+}
+
+.caothap #btn_finish {
+    width: 109px;
+    height: 45px;
+    position: absolute;
+    z-index: 999999999;
+    top: 258px;
+    left: 245px;
+    cursor: pointer;
+}
+
+.caothap #btn_high {
+    width: 45px;
+    height: 28px;
+    position: absolute;
+    z-index: 999999999;
+    top: 142px;
+    left: 278px;
+    cursor: pointer;
+}
+
+    .caothap #btn_high img {
+        width: 44px;
+    }
+
+.caothap #btn_low {
+    width: 43px;
+    height: 27px;
+    position: absolute;
+    z-index: 999999999;
+    top: 209px;
+    left: 278px;
+    cursor: pointer;
+}
+
+    .caothap #btn_low img {
+        width: 44px;
+    }
+
+.caothap #money_high {
+    width: 102px;
+    height: 23px;
+    position: absolute;
+    z-index: 999999999;
+    top: 121px;
+    left: 250px;
+    text-align: center;
+    color: #fffd46;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000000;
+    font-family: 'helveticaneuecondensedbold';
+}
+
+.caothap #money_low {
+    width: 102px;
+    height: 23px;
+    position: absolute;
+    z-index: 999999999;
+    top: 235px;
+    left: 249px;
+    text-align: center;
+    color: #fffd46;
+    font-size: 15px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px #000000;
+    font-family: 'helveticaneuecondensedbold';
+}
+
+.caothap #money_add {
+    width: 102px;
+    height: 23px;
+    position: absolute;
+    z-index: 999999999;
+    top: 178px;
+    left: 248px;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: 'helveticaneuecondensedbold';
+    text-shadow: 1px 1px 1px #000000;
+    line-height: 21px;
+}
+
+.caothap #box_ketqua {
+    width: 254px;
+    height: 27px;
+    position: absolute;
+    z-index: 999999999;
+    bottom: 34px;
+    left: 89px;
+    line-height: 27px;
+    padding: 0px 5px;
+    overflow: hidden;
+    color: #000000;
+    text-align: center;
+    font-size: 10px;
+}
+
+div#jackpot_bigwin {
+    z-index: 9999999999;
+    position: relative;
+}
+
+.caothap #box_jackpot_a1, .caothap #box_jackpot_a2, .caothap #box_jackpot_a3 {
+    width: 23px;
+    height: 30px;
+    position: absolute;
+    z-index: 999999999;
+}
+
+.caothap #box_jackpot_a1 {
+    bottom: 66px;
+    left: 122px;
+}
+
+.caothap #box_jackpot_a2 {
+    bottom: 66px;
+    left: 151px;
+}
+
+.caothap #box_jackpot_a3 {
+    bottom: 66px;
+    left: 182px;
+}
+
+
+
+div.power_controls {
+    margin-right: 70px;
+}
+
+div.html5_logo {
+    margin-left: 70px;
+}
+
+/* Styles for the power selection controls */
+.power {
+    background-color: #cccccc;
+    cursor: pointer;
+    border: 1px solid #333333;
+}
+
+.pw1 {
+    background-color: #6fe8f0;
+}
+
+.pw2 {
+    background-color: #86ef6f;
+}
+
+.pw3 {
+    background-color: #ef6f6f;
+}
+
+/* Style applied to the spin button once a power has been selected */
+.clickable {
+    cursor: pointer;
+}
+
+/* Other misc styles */
+.margin_bottom {
+    margin-bottom: 5px;
+}
+
+#md_caothap_history, #md_caothap_bangxephang {
+    width: 659px;
+    height: 383px;
+    background: url(../img/popup.png) top left no-repeat;
+}
+
+#list_caothap_history, #list_caothap_bangxephang {
+    height: 305px;
+    margin-top: 10px;
+}
+
+#md_caothap_history, .content_caothap, #md_caothap_bangxephang, .content_bangxephang {
+    display: none;
+}
+
+    #md_caothap_history .agency-header, #md_caothap_bangxephang .agency-header {
+        text-align: center;
+    }
+
+#popup_caothap_history .jBox-closeButton, #popup_caothap_bangxephang .jBox-closeButton, #popup_caothap_huongdan .jBox-closeButton {
+    background: transparent !important;
+    background-size: contain;
+    width: 37px;
+    height: 37px;
+    top: 10px;
+    right: 4px;
+    opacity: 1;
+}
+
+    #popup_caothap_history .jBox-closeButton svg, #popup_caothap_bangxephang .jBox-closeButton svg, #popup_caothap_huongdan .jBox-closeButton svg {
+        opacity: 0;
+    }
+
+.jBox-closeButton-box:before {
+    display: none;
+}
+
+#list_caothap_history .color0, #list_caothap_bangxephang .color0 {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#list_caothap_history .color1, #list_caothap_bangxephang .color1 {
+    color: #ffe155;
+}
+
+#list_caothap_history .color2, #list_caothap_bangxephang .color2 {
+    color: #ceff6e;
+}
+
+#list_caothap_history .color3, #list_caothap_bangxephang .color3 {
+    color: #ff7836;
+}
+
+#list_caothap_history .color4, #list_caothap_bangxephang .color4 {
+    color: #9E9E9E;
+}
+
+#list_caothap_history, #list_caothap_bangxephang {
+    width: 630px;
+    margin: 10px auto 0px 20px;
+}
+
+#md_caothap_history .agency-title, #md_caothap_bangxephang .agency-title {
+    margin-bottom: 0px;
+}
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+    border-top: none;
+    padding: 7px 6px;
+    font-size: 12px;
+}
+
+#list_caothap_history .table > tbody > tr.havebg {
+    background: url(../img/khung-lich-dat-cuoc.png?abc) top left no-repeat;
+}
+
+#list_caothap_bangxephang .table > tbody > tr.havebg {
+    background: url(../img/khung-vinh-danh.png?abc) top left no-repeat;
+}
+
+.caothap .muccuoc img {
+    width: 39px;
+}
+
+div#box_drag_trenduoi {
+    width: 382px;
+    height: 350px;
+    position: absolute;
+    z-index: 99;
+}
+/*#tab_caothap_huongdan_parent {
+    height: 2900px;
+}*/
+#md_caothap_huongdan .tab-user {
+    height: 100%;
+}
+
+#tab_caothap_huongdan_parent {
+    height: 100%;
+    width: 100%;
+    /*overflow: hidden;*/
+}
+
+#tab_caothap_huongdan {
+    width: 100%;
+    height: 100%;
+    /*overflow-y: scroll;*/
+    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+    */
+}
